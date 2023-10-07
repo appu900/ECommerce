@@ -21,6 +21,8 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
+import { Avatar } from "@mui/material";
+
 const navigation = {
   categories: [
     {
@@ -358,14 +360,14 @@ export default function Navigation() {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex lg:ml-0 items-center">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
+
+                  {/* logo here */}
+                  <p className="font-bold text-[19px] font-mono lg:mt-1 text-indigo-700">
+                    LUXELANE
+                  </p>
                 </a>
               </div>
 
@@ -499,29 +501,7 @@ export default function Navigation() {
                     href="#"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
-                    Sign in
-                  </a>
-                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a
-                    href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                  >
-                    Create account
-                  </a>
-                </div>
-
-                <div className="hidden lg:ml-8 lg:flex">
-                  <a
-                    href="#"
-                    className="flex items-center text-gray-700 hover:text-gray-800"
-                  >
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
-                    <span className="sr-only">, change currency</span>
+                    <Avatar sx={{ height: "30px", width: "33px" }}>A</Avatar>
                   </a>
                 </div>
 
