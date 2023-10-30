@@ -7,6 +7,7 @@ import Product from "./Cutomer/Components/Product/Product";
 import Productdetails from "./Cutomer/Components/ProductDetails/Productdetails";
 import Cart from "./Cutomer/Components/Cart/Cart";
 import CheckOut from "./Cutomer/Components/Checkout/CheckOut";
+import Footer from "./Cutomer/Components/Footer";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         {/* <Productdetails/> */}
         {/* <Cart/> */}
         <CheckOut/>
+        <Footer/>
       </div>
     </div>
   );
