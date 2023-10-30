@@ -29,7 +29,7 @@ const HomeSectionCarsusal = ({ data,sectionname }) => {
   const items = data.slice(0, 15).map((item) => <HomeCard product={item} />);
 
   return (
-    <div className="relative px-4 lg:px-8 border">
+    <div className="relative px-4 lg:px-8 ">
       <h2 className="text-2xl font-bold uppercase lg:px-14 text-gray-700 py-5">{sectionname}</h2>
       <div className="relative p-5">
         <AliceCarousel
