@@ -22,6 +22,8 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { Avatar } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import Profile from "./AdditionalComponents/Profile";
 
 const navigation = {
   categories: [
@@ -159,6 +161,7 @@ function classNames(...classes) {
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="bg-white shadow-lg">
@@ -365,7 +368,9 @@ export default function Navigation() {
                   <span className="sr-only">Your Company</span>
 
                   {/* logo here */}
-                  <p className="font-bold text-[19px] font-mono lg:mt-1 text-indigo-700">
+                  <p
+                  onClick={()=>navigate("/")}
+                  className="font-bold text-[19px] font-mono lg:mt-1 text-indigo-700">
                     LUXELANE
                   </p>
                 </a>
@@ -501,8 +506,11 @@ export default function Navigation() {
                     href="#"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
-                    <Avatar sx={{ height: "30px", width: "33px" }}>A</Avatar>
+                    <Avatar sx={{ height: "30px", width: "33px" }}>
+                      p
+                    </Avatar>
                   </a>
+                  <Profile/>
                 </div>
 
                 {/* Search */}

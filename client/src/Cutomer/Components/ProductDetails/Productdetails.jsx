@@ -6,6 +6,8 @@ import ProductReviewCard from "./ProductReviewCard";
 import HomeSectionCarsusal from "../HomeSectionCarsusal";
 import { mens_kurta } from "../../../Data/Men/men_kurta";
 import HomeCard from "../HomeCard";
+import { useNavigate } from "react-router-dom";
+
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -62,6 +64,7 @@ function classNames(...classes) {
 }
 
 export default function Productdetails() {
+  const navigate = useNavigate();
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
@@ -238,7 +241,9 @@ export default function Productdetails() {
                   </RadioGroup>
                 </div>
 
-                <Button className="mt-3" variant="contained" sx={{background:"#7710ed",px:"2rem",py:"1rem",mt:"1rem"}}>Add to cart</Button>
+                <Button 
+                onClick={()=>navigate('/cart')}
+                className="mt-3" variant="contained" sx={{background:"#7710ed",px:"2rem",py:"1rem",mt:"1rem"}}>Add to cart</Button>
               </form>
             </div>
 
