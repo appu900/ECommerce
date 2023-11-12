@@ -23,7 +23,7 @@ public class Product {
 
 
     @Column(name = "discounted_price")
-    private String discountPrice;
+    private int discountPrice;
 
     @Column(name = "discount_persent")
     private int discountPersent;
@@ -63,7 +63,7 @@ public class Product {
     // empty constructor
     public Product(){}
 
-    public Product(Long id, String title, String description, int price, String discountPrice, int discountPersent, int quantity, String brand, String color, Set<Size> sizes, String imageUrl, List<Rating> ratings, List<Review> reviews, int numRatings, Category category, LocalDateTime createdAt) {
+    public Product(Long id, String title, String description, int price, int discountPrice, int discountPersent, int quantity, String brand, String color, Set<Size> sizes, String imageUrl, List<Rating> ratings, List<Review> reviews, int numRatings, Category category, LocalDateTime createdAt) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -114,11 +114,11 @@ public class Product {
         this.price = price;
     }
 
-    public String getDiscountPrice() {
+    public int getDiscountPrice() {
         return discountPrice;
     }
 
-    public void setDiscountPrice(String discountPrice) {
+    public void setDiscountPrice(int discountPrice) {
         this.discountPrice = discountPrice;
     }
 

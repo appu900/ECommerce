@@ -30,6 +30,7 @@ public class AuthController {
     private UserRepository userRepo;
 
 
+    @Autowired
     private JwtProvider jwtProvider;
 
     @Autowired
